@@ -156,6 +156,8 @@ htmlhelp_basename = 'SystemsApproach'
 
 # -- Options for LaTeX output ------------------------------------------------
 
+latex_engine = 'xelatex'
+
 latex_elements = {
     # The paper size ('letterpaper' or 'a4paper').
     #
@@ -167,7 +169,9 @@ latex_elements = {
 
     # Additional stuff for the LaTeX preamble.
     #
-    # 'preamble': '',
+    'preamble': r'''
+\setlength{\headheight}{16pt}
+''',
 
     # Latex figure (float) alignment
     #
@@ -271,5 +275,5 @@ def setup(app):
 
     app.add_transform(AutoStructify)
 
-    app.add_js_file('https://www.googletagmanager.com/gtag/js?id=G-8NK2HCPFQ5')
-    app.add_js_file(None, body=GA_INVOKE_JS)
+    # app.add_js_file('https://www.googletagmanager.com/gtag/js?id=G-8NK2HCPFQ5')
+    # app.add_js_file(None, body=GA_INVOKE_JS)
